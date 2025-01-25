@@ -6,11 +6,11 @@ services:
     restart: unless-stopped
     env_file: postgres.env
     ports:
-      - '5432:5432'
+      - '127.0.0.1:5432:5432'
 
   mailpit:
     image: 'docker.io/axllent/mailpit'
     restart: unless-stopped
     ports:
-      - '8025:8025'
-      - '1025:1025'
+      - '127.0.0.1:8025:8025'
+      - '127.0.0.1:1025:1025'
